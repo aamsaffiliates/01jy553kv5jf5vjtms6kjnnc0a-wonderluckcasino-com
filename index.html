@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderluck Casino - 100% Welcome Bonus Up to €500 + 200 Free Spins | Premium Online Casino</title>
+    <meta name="description" content="Join Wonderluck Casino for an exclusive 100% Welcome Bonus up to €500 + 200 Free Spins. Experience premium slot games, live dealers, and 15% weekly cashback. Play responsibly.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Wonderluck Casino - 100% Welcome Bonus Up to €500 + 200 Free Spins">
+    <meta property="og:description" content="Experience luxury gaming at Wonderluck Casino. Exclusive welcome bonus, premium slots, and weekly cashback rewards.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wonderluckcasino.com">
+    <meta property="og:image" content="https://wonderluckcasino.com/images/hero.webp">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'casino-blue': '#0B1426',
+                        'casino-dark': '#1A2332',
+                        'casino-gold': '#b546ff',
+                        'casino-emerald': '#50C878',
+                        'casino-accent': '#430ba7'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-casino-blue text-white overflow-x-hidden">
+    <!-- Floating Elements Background -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="floating-card absolute top-20 left-10 text-casino-gold text-4xl opacity-30">♠</div>
+        <div class="floating-card absolute top-40 right-20 text-casino-gold text-3xl opacity-25" style="animation-delay: 1s;">♦</div>
+        <div class="floating-dice absolute top-60 left-1/4 text-casino-emerald text-2xl opacity-20" style="animation-delay: 2s;">⚀</div>
+        <div class="floating-chip absolute bottom-40 right-10 text-casino-gold text-3xl opacity-30" style="animation-delay: 0.5s;">🎰</div>
+        <div class="floating-star absolute top-32 left-1/2 text-casino-emerald text-2xl opacity-25" style="animation-delay: 1.5s;">✦</div>
+        <div class="floating-card absolute bottom-60 left-20 text-casino-gold text-3xl opacity-20" style="animation-delay: 2.5s;">♣</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-casino-dark/95 backdrop-blur-md z-50 border-b border-casino-gold/20">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-crown text-casino-gold text-2xl glow-text"></i>
+                    <span class="text-2xl font-bold text-casino-gold glow-text">Wonderluck</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#games" class="nav-link">Games</a>
+                    <a href="#bonuses" class="nav-link">Bonuses</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#support" class="nav-link">Support</a>
+                </div>
+                <button onclick="redirectToGo()" class="cta-button px-6 py-2 text-sm">
+                    <i class="fas fa-play mr-2"></i>Play Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-casino-blue via-casino-dark to-casino-accent"></div>
+        <div class="spotlight spotlight-1"></div>
+        <div class="spotlight spotlight-2"></div>
+        
+        <div class="container mx-auto px-4 z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="hero-title text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                        <span class="text-casino-gold glow-text">Wonder</span><span class="text-white">luck</span>
+                        <br>
+                        <span class="text-casino-emerald glow-text text-4xl md:text-5xl">Casino</span>
+                    </h1>
+                    
+                    <div class="bonus-box p-6 rounded-2xl mb-8 backdrop-blur-md">
+                        <div class="text-center">
+                            <div class="text-casino-gold text-sm font-semibold mb-2 uppercase tracking-wider">Welcome Bonus</div>
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">100% Up to €500</div>
+                            <div class="text-casino-emerald text-xl font-semibold mb-3">+ 200 Free Spins</div>
+                            <div class="text-casino-gold text-sm">+ 15% Weekly Cashback</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button onclick="redirectToGo()" class="cta-button-large">
+                            <i class="fas fa-gift mr-2"></i>Claim Bonus
+                        </button>
+                        <button onclick="redirectToGo()" class="cta-button-secondary">
+                            <i class="fas fa-gamepad mr-2"></i>Play Games
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="hero-image-container">
+                        <img src="/images/hero.webp" alt="Wonderluck Casino Gaming" class="hero-image rounded-2xl shadow-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-casino-blue/50 to-transparent rounded-2xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Claim Bonus -->
+    <section class="py-20 bg-casino-dark/50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16">How to Claim Your Bonus</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="step-card text-center">
+                    <div class="step-icon mb-4">
+                        <i class="fas fa-user-plus text-4xl text-casino-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-casino-gold">1. Register</h3>
+                    <p class="text-gray-300">Create your account in under 2 minutes</p>
+                </div>
+                <div class="step-card text-center">
+                    <div class="step-icon mb-4">
+                        <i class="fas fa-credit-card text-4xl text-casino-emerald"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-casino-emerald">2. Deposit</h3>
+                    <p class="text-gray-300">Make your first deposit of €20 or more</p>
+                </div>
+                <div class="step-card text-center">
+                    <div class="step-icon mb-4">
+                        <i class="fas fa-gift text-4xl text-casino-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-casino-gold">3. Activate</h3>
+                    <p class="text-gray-300">Bonus is automatically credited</p>
+                </div>
+                <div class="step-card text-center">
+                    <div class="step-icon mb-4">
+                        <i class="fas fa-play text-4xl text-casino-emerald"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-casino-emerald">4. Play</h3>
+                    <p class="text-gray-300">Start playing with double the funds</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Games -->
+    <section id="games" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16">Featured Games</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="game-card">
+                    <img src="/images/book_of_dead.webp" alt="Book of Dead" class="game-image">
+                    <div class="game-overlay">
+                        <h3 class="font-bold text-lg mb-2">Book of Dead</h3>
+                        <button onclick="redirectToGo()" class="cta-button-small">Play Now</button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="/images/ripcity.webp" alt="RipCity" class="game-image">
+                    <div class="game-overlay">
+                        <h3 class="font-bold text-lg mb-2">RipCity</h3>
+                        <button onclick="redirectToGo()" class="cta-button-small">Play Now</button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="/images/lebandit.webp" alt="Le Bandit" class="game-image">
+                    <div class="game-overlay">
+                        <h3 class="font-bold text-lg mb-2">Le Bandit</h3>
+                        <button onclick="redirectToGo()" class="cta-button-small">Play Now</button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="/images/stormforget.webp" alt="Stormforget" class="game-image">
+                    <div class="game-overlay">
+                        <h3 class="font-bold text-lg mb-2">Stormforget</h3>
+                        <button onclick="redirectToGo()" class="cta-button-small">Play Now</button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="/images/sugar_rush1000.webp" alt="Sugar Rush 1000" class="game-image">
+                    <div class="game-overlay">
+                        <h3 class="font-bold text-lg mb-2">Sugar Rush 1000</h3>
+                        <button onclick="redirectToGo()" class="cta-button-small">Play Now</button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="/images/zezeus.webp" alt="Ze Zeus" class="game-image">
+                    <div class="game-overlay">
+                        <h3 class="font-bold text-lg mb-2">Ze Zeus</h3>
+                        <button onclick="redirectToGo()" class="cta-button-small">Play Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-casino-dark/30">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="section-title text-center mb-16">About Wonderluck Casino</h2>
+                <div class="prose prose-lg text-gray-300 leading-relaxed">
+                    <p class="mb-6">Wonderluck Casino stands as a premier destination for discerning players seeking an exceptional gaming experience. Established with a commitment to excellence, this international casino platform delivers sophisticated entertainment across multiple gaming categories, from classic table games to innovative slot machines.</p>
+                    
+                    <p class="mb-6">The casino operates under strict regulatory oversight, ensuring fair play and transparent operations for all players. With a comprehensive game library featuring over 2,000 titles, players can explore everything from traditional European roulette and blackjack variants to modern video slots with progressive jackpots reaching millions of euros.</p>
+                    
+                    <p class="mb-6">Advanced security protocols protect all player data and financial transactions, while the platform's sophisticated random number generation systems guarantee fair outcomes across all games. The casino's commitment to responsible gaming includes comprehensive player protection tools, deposit limits, and partnerships with leading problem gambling organizations.</p>
+                    
+                    <p class="mb-6">Customer service excellence remains a cornerstone of the Wonderluck experience, with multilingual support available 24/7 through live chat, email, and telephone channels. The platform's mobile-optimized design ensures seamless gameplay across all devices, while regular promotions and a comprehensive VIP program reward player loyalty.</p>
+                    
+                    <p class="mb-8">Banking operations support multiple currencies and payment methods, with fast withdrawal processing and secure deposit options. The casino's partnership with leading software providers ensures access to the latest game releases and exclusive content not available elsewhere.</p>
+                </div>
+                
+                <div class="mt-12">
+                    <h3 class="text-2xl font-bold text-casino-gold mb-8 text-center">Game Providers</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <div class="provider-card">NetEnt</div>
+                        <div class="provider-card">Microgaming</div>
+                        <div class="provider-card">Play'n GO</div>
+                        <div class="provider-card">Evolution Gaming</div>
+                        <div class="provider-card">Pragmatic Play</div>
+                        <div class="provider-card">Red Tiger</div>
+                        <div class="provider-card">Big Time Gaming</div>
+                        <div class="provider-card">Yggdrasil</div>
+                        <div class="provider-card">Quickspin</div>
+                        <div class="provider-card">Thunderkick</div>
+                        <div class="provider-card">Push Gaming</div>
+                        <div class="provider-card">Nolimit City</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16">Payment Methods</h2>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold text-casino-gold mb-6">Deposit Methods</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full bg-casino-dark/50 rounded-lg">
+                                <thead>
+                                    <tr class="border-b border-casino-gold/20">
+                                        <th class="text-left p-4 text-casino-gold">Method</th>
+                                        <th class="text-left p-4 text-casino-gold">Min/Max</th>
+                                        <th class="text-left p-4 text-casino-gold">Processing</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-700">
+                                        <td class="p-4">Visa/Mastercard</td>
+                                        <td class="p-4">€20 / €5,000</td>
+                                        <td class="p-4">Instant</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-700">
+                                        <td class="p-4">Bank Transfer</td>
+                                        <td class="p-4">€50 / €10,000</td>
+                                        <td class="p-4">1-3 days</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-700">
+                                        <td class="p-4">Skrill</td>
+                                        <td class="p-4">€10 / €3,000</td>
+                                        <td class="p-4">Instant</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-700">
+                                        <td class="p-4">Neteller</td>
+                                        <td class="p-4">€10 / €3,000</td>
+                                        <td class="p-4">Instant</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4">Paysafecard</td>
+                                        <td class="p-4">€10 / €1,000</td>
+                                        <td class="p-4">Instant</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-casino-emerald mb-6">Withdrawal Methods</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full bg-casino-dark/50 rounded-lg">
+                                <thead>
+                                    <tr class="border-b border-casino-emerald/20">
+                                        <th class="text-left p-4 text-casino-emerald">Method</th>
+                                        <th class="text-left p-4 text-casino-emerald">Min/Max</th>
+                                        <th class="text-left p-4 text-casino-emerald">Processing</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-700">
+                                        <td class="p-4">Bank Transfer</td>
+                                        <td class="p-4">€50 / €5,000</td>
+                                        <td class="p-4">1-5 days</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-700">
+                                        <td class="p-4">Skrill</td>
+                                        <td class="p-4">€20 / €3,000</td>
+                                        <td class="p-4">24 hours</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-700">
+                                        <td class="p-4">Neteller</td>
+                                        <td class="p-4">€20 / €3,000</td>
+                                        <td class="p-4">24 hours</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4">Visa/Mastercard</td>
+                                        <td class="p-4">€50 / €2,000</td>
+                                        <td class="p-4">3-7 days</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-gray-300 leading-relaxed">
+                    <p class="mb-4">Wonderluck Casino prioritizes secure and efficient payment processing for all players. The platform supports multiple payment methods tailored to international players, ensuring convenient deposits and withdrawals across different regions. All financial transactions are protected by advanced SSL encryption technology, guaranteeing the safety of personal and banking information.</p>
+                    
+                    <p class="mb-4">Deposit processing is typically instantaneous for most electronic payment methods, allowing players to begin gaming immediately. Withdrawal requests undergo a standard verification process to ensure account security, with most e-wallet withdrawals processed within 24 hours. Bank transfers may require additional processing time due to standard banking procedures.</p>
+                    
+                    <p>The casino maintains transparent fee structures with no hidden charges on most payment methods. Players can view detailed information about processing times and any applicable fees in their account dashboard before initiating transactions. Customer support is available to assist with any payment-related inquiries or concerns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & VIP -->
+    <section class="py-20 bg-casino-dark/30">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-3xl font-bold text-casino-gold mb-8">Security Features</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-shield-alt text-casino-gold text-2xl mt-1"></i>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2">SSL Encryption</h3>
+                                    <p class="text-gray-300">256-bit SSL encryption protects all data transmission</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-user-shield text-casino-emerald text-2xl mt-1"></i>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2">Account Verification</h3>
+                                    <p class="text-gray-300">Multi-step verification process ensures account security</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-random text-casino-gold text-2xl mt-1"></i>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2">Fair Gaming</h3>
+                                    <p class="text-gray-300">Certified random number generators ensure fair play</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-balance-scale text-casino-emerald text-2xl mt-1"></i>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2">Licensed Operation</h3>
+                                    <p class="text-gray-300">Fully licensed and regulated gaming platform</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h2 class="text-3xl font-bold text-casino-emerald mb-8">VIP Program Levels</h2>
+                        <div class="space-y-4">
+                            <div class="vip-level bg-gray-600/30 p-4 rounded-lg">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-star text-gray-400"></i>
+                                    <span class="font-bold">Bronze</span>
+                                    <span class="text-sm text-gray-400">€0 - €999</span>
+                                </div>
+                            </div>
+                            <div class="vip-level bg-orange-600/30 p-4 rounded-lg">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-star text-orange-400"></i>
+                                    <span class="font-bold">Silver</span>
+                                    <span class="text-sm text-gray-400">€1,000 - €4,999</span>
+                                </div>
+                            </div>
+                            <div class="vip-level bg-casino-gold/30 p-4 rounded-lg">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-star text-casino-gold"></i>
+                                    <span class="font-bold">Gold</span>
+                                    <span class="text-sm text-gray-400">€5,000 - €19,999</span>
+                                </div>
+                            </div>
+                            <div class="vip-level bg-purple-600/30 p-4 rounded-lg">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-gem text-purple-400"></i>
+                                    <span class="font-bold">Platinum</span>
+                                    <span class="text-sm text-gray-400">€20,000 - €99,999</span>
+                                </div>
+                            </div>
+                            <div class="vip-level bg-blue-600/30 p-4 rounded-lg">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-crown text-blue-400"></i>
+                                    <span class="font-bold">Diamond</span>
+                                    <span class="text-sm text-gray-400">€100,000+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-gray-300 leading-relaxed">
+                    <p class="mb-4">The VIP program at Wonderluck Casino rewards loyal players with exclusive benefits and personalized service. Each tier offers increasing rewards including higher cashback percentages, exclusive bonuses, faster withdrawal processing, and dedicated account management. VIP members enjoy priority customer support, invitations to special events, and customized promotional offers.</p>
+                    
+                    <p class="mb-4">Progression through VIP levels is based on total deposits and gaming activity over a rolling 12-month period. Higher tiers unlock premium benefits such as increased withdrawal limits, birthday bonuses, and access to exclusive tournaments. Diamond level members receive personal account managers and bespoke gaming experiences.</p>
+                    
+                    <p>Security measures are continuously updated to address emerging threats and maintain the highest standards of player protection. Regular security audits and compliance reviews ensure the platform meets international gaming standards and regulatory requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonuses Review -->
+    <section id="bonuses" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16">Bonus Programs</h2>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 mb-12">
+                    <div class="bonus-detail-card">
+                        <h3 class="text-2xl font-bold text-casino-gold mb-6">Welcome Package</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-casino-emerald"></i>
+                                <span>100% match bonus up to €500</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-casino-emerald"></i>
+                                <span>200 free spins on selected slots</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-casino-emerald"></i>
+                                <span>Minimum deposit: €20</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-casino-emerald"></i>
+                                <span>Wagering requirement: 35x bonus</span>
+                            </li>
+                        </ul>
+                        <button onclick="redirectToGo()" class="cta-button w-full">Claim Welcome Bonus</button>
+                    </div>
+                    
+                    <div class="bonus-detail-card">
+                        <h3 class="text-2xl font-bold text-casino-emerald mb-6">Weekly Cashback</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-casino-gold"></i>
+                                <span>15% cashback on net losses</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-casino-gold"></i>
+                                <span>Calculated every Monday</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-casino-gold"></i>
+                                <span>No wagering requirements</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-casino-gold"></i>
+                                <span>Automatic credit to account</span>
+                            </li>
+                        </ul>
+                        <button onclick="redirectToGo()" class="cta-button-secondary w-full">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="bonus-terms bg-casino-dark/50 p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold text-casino-gold mb-6">Bonus Terms & Conditions</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="font-bold mb-4 text-casino-emerald">General Terms</h4>
+                            <table class="w-full text-sm">
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2 text-gray-400">Wagering Requirement</td>
+                                    <td class="py-2">35x bonus amount</td>
+                                </tr>
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2 text-gray-400">Maximum Bet</td>
+                                    <td class="py-2">€5 per spin</td>
+                                </tr>
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2 text-gray-400">Bonus Validity</td>
+                                    <td class="py-2">30 days</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 text-gray-400">Eligible Games</td>
+                                    <td class="py-2">Slots, Keno</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold mb-4 text-casino-emerald">Game Contributions</h4>
+                            <table class="w-full text-sm">
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2 text-gray-400">Slots</td>
+                                    <td class="py-2">100%</td>
+                                </tr>
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2 text-gray-400">Table Games</td>
+                                    <td class="py-2">10%</td>
+                                </tr>
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2 text-gray-400">Live Casino</td>
+                                    <td class="py-2">10%</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 text-gray-400">Video Poker</td>
+                                    <td class="py-2">5%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-gray-300 leading-relaxed">
+                        <p class="mb-4">All bonus offers are subject to the casino's terms and conditions. Players must complete wagering requirements within the specified timeframe to convert bonus funds to withdrawable cash. Bonus funds cannot be withdrawn until wagering requirements are met.</p>
+                        
+                        <p class="mb-4">Free spins are credited in batches over multiple days and must be used within 24 hours of being credited. Winnings from free spins are subject to the same wagering requirements as deposit bonuses. Maximum withdrawal from free spin winnings is €100 unless otherwise stated.</p>
+                        
+                        <p>The casino reserves the right to modify or cancel bonus offers at any time. Players found to be abusing bonus terms may have their accounts suspended and winnings confiscated. Only one bonus per player, household, or IP address is permitted.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Support -->
+    <section id="support" class="py-20 bg-casino-dark/30">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16">Customer Support</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="support-card text-center">
+                        <i class="fas fa-comments text-4xl text-casino-gold mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Live Chat</h3>
+                        <p class="text-gray-300 mb-4">24/7 instant support</p>
+                        <button onclick="redirectToGo()" class="cta-button-small">Start Chat</button>
+                    </div>
+                    <div class="support-card text-center">
+                        <i class="fas fa-envelope text-4xl text-casino-emerald mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Email</h3>
+                        <p class="text-gray-300 mb-4">support@wonderluckcasino.com</p>
+                        <button onclick="redirectToGo()" class="cta-button-small">Send Email</button>
+                    </div>
+                    <div class="support-card text-center">
+                        <i class="fas fa-phone text-4xl text-casino-gold mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Phone</h3>
+                        <p class="text-gray-300 mb-4">+1-800-WONDER-1</p>
+                        <button onclick="redirectToGo()" class="cta-button-small">Call Now</button>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-casino-gold mb-6">Multilingual Support Available</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="language-tag">English</span>
+                        <span class="language-tag">German</span>
+                        <span class="language-tag">French</span>
+                        <span class="language-tag">Spanish</span>
+                        <span class="language-tag">Italian</span>
+                        <span class="language-tag">Portuguese</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Promotions -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16">Other Promotions</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="promo-card">
+                    <div class="p-6">
+                        <i class="fas fa-calendar-week text-4xl text-casino-gold mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3 text-casino-gold">Weekend Reload</h3>
+                        <p class="text-gray-300 mb-4">Get 50% bonus up to €200 every weekend. Available Friday to Sunday for all registered players.</p>
+                        <ul class="text-sm text-gray-400 mb-6">
+                            <li>• Minimum deposit: €30</li>
+                            <li>• Wagering: 30x bonus</li>
+                            <li>• Valid: Fri-Sun</li>
+                        </ul>
+                        <button onclick="redirectToGo()" class="cta-button w-full">Claim Now</button>
+                    </div>
+                </div>
+                
+                <div class="promo-card">
+                    <div class="p-6">
+                        <i class="fas fa-trophy text-4xl text-casino-emerald mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3 text-casino-emerald">Monthly Tournament</h3>
+                        <p class="text-gray-300 mb-4">Compete for €10,000 prize pool in monthly slot tournaments. Leaderboard updates in real-time.</p>
+                        <ul class="text-sm text-gray-400 mb-6">
+                            <li>• Prize pool: €10,000</li>
+                            <li>• Entry fee: Free</li>
+                            <li>• Duration: Full month</li>
+                        </ul>
+                        <button onclick="redirectToGo()" class="cta-button-secondary w-full">Join Tournament</button>
+                    </div>
+                </div>
+                
+                <div class="promo-card">
+                    <div class="p-6">
+                        <i class="fas fa-birthday-cake text-4xl text-casino-gold mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3 text-casino-gold">Birthday Bonus</h3>
+                        <p class="text-gray-300 mb-4">Celebrate your special day with exclusive birthday rewards and personalized offers.</p>
+                        <ul class="text-sm text-gray-400 mb-6">
+                            <li>• Personal bonus offer</li>
+                            <li>• Free spins included</li>
+                            <li>• VIP members get extra</li>
+                        </ul>
+                        <button onclick="redirectToGo()" class="cta-button w-full">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Feature - Bonus Crab -->
+    <section class="py-20 bg-casino-dark/50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6">
+                            <span class="text-casino-gold">Bonus Crab</span>
+                            <span class="text-casino-emerald"> Feature</span>
+                        </h2>
+                        <p class="text-xl text-gray-300 mb-6">Experience the exclusive Bonus Crab feature - a unique gaming mechanic that randomly appears during gameplay to deliver surprise rewards and multipliers.</p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-star text-casino-gold"></i>
+                                <span>Random bonus triggers during any spin</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-star text-casino-emerald"></i>
+                                <span>Multipliers up to 50x your bet</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-star text-casino-gold"></i>
+                                <span>Instant cash prizes and free spins</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-star text-casino-emerald"></i>
+                                <span>Available on selected slot games</span>
+                            </div>
+                        </div>
+                        
+                        <button onclick="redirectToGo()" class="cta-button-large">Try Bonus Crab Games</button>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="bonus-crab-container">
+                            <img src="/images/bonus-crab.webp" alt="Bonus Crab Feature" class="w-full rounded-2xl shadow-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-t from-casino-blue/30 to-transparent rounded-2xl"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16">Licensed & Secure</h2>
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <div class="trust-badge">
+                    <i class="fas fa-certificate text-4xl text-casino-gold mb-2"></i>
+                    <div class="text-sm font-semibold">Licensed</div>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-shield-alt text-4xl text-casino-emerald mb-2"></i>
+                    <div class="text-sm font-semibold">SSL Secured</div>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-check-circle text-4xl text-casino-gold mb-2"></i>
+                    <div class="text-sm font-semibold">Fair Gaming</div>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-user-shield text-4xl text-casino-emerald mb-2"></i>
+                    <div class="text-sm font-semibold">Player Protection</div>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-globe text-4xl text-casino-gold mb-2"></i>
+                    <div class="text-sm font-semibold">International</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-casino-dark/30">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-16">Frequently Asked Questions</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 class="text-lg font-bold">How do I claim the welcome bonus?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Register a new account, make your first deposit of €20 or more, and the bonus will be automatically credited to your account. The 200 free spins are distributed over 10 days (20 spins per day).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 class="text-lg font-bold">What are the wagering requirements?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The welcome bonus has a 35x wagering requirement on the bonus amount. For example, if you receive a €100 bonus, you need to wager €3,500 before you can withdraw any winnings.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 class="text-lg font-bold">How long do withdrawals take?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>E-wallet withdrawals (Skrill, Neteller) are processed within 24 hours. Bank transfers take 1-5 business days, while card withdrawals can take 3-7 business days depending on your bank.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 class="text-lg font-bold">Is the casino available on mobile?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, Wonderluck Casino is fully optimized for mobile devices. You can access all games and features through your mobile browser without downloading any apps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-casino-dark border-t border-casino-gold/20 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-crown text-casino-gold text-2xl"></i>
+                        <span class="text-2xl font-bold text-casino-gold">Wonderluck</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Premium online casino experience with exclusive games and generous bonuses.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-casino-gold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#games" class="text-gray-400 hover:text-casino-emerald">Games</a></li>
+                        <li><a href="#bonuses" class="text-gray-400 hover:text-casino-emerald">Bonuses</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-casino-emerald">About</a></li>
+                        <li><a href="#support" class="text-gray-400 hover:text-casino-emerald">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-casino-gold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="text-gray-400">Live Chat: 24/7</li>
+                        <li class="text-gray-400">Email: support@wonderluckcasino.com</li>
+                        <li class="text-gray-400">Phone: +1-800-WONDER-1</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-casino-gold mb-4">Responsible Gaming</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-hand-paper text-casino-emerald"></i>
+                            <span class="text-sm text-gray-400">18+ Only</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-clock text-casino-emerald"></i>
+                            <span class="text-sm text-gray-400">Set Time Limits</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-phone text-casino-emerald"></i>
+                            <span class="text-sm text-gray-400">Problem Gambling Helpline: 1-800-522-4700</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-casino-gold/20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © 2024 Wonderluck Casino. All rights reserved. | 18+ | Play Responsibly
+                    </p>
+                    <div class="flex space-x-4 text-sm">
+                        <a href="#" class="text-gray-400 hover:text-casino-emerald">Terms & Conditions</a>
+                        <a href="#" class="text-gray-400 hover:text-casino-emerald">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-casino-emerald">Responsible Gaming</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = this.querySelector('i');
+                
+                faqItem.classList.toggle('active');
+                
+                if (faqItem.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    answer.style.maxHeight = '0';
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Redirect function for all CTA buttons
+        function redirectToGo() {
+            window.location.href = '/go';
+        }
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-image-container');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
