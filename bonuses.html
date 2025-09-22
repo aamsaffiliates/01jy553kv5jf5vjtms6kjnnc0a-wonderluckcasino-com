@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonuses | Wonderluck Casino</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="inner-pages.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'casino-blue': '#0B1426',
+                        'casino-dark': '#1A2332',
+                        'casino-gold': '#b546ff',
+                        'casino-emerald': '#50C878',
+                        'casino-accent': '#430ba7'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-casino-blue text-white overflow-x-hidden">
+    <!-- Floating Elements Background -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="floating-card absolute top-20 left-10 text-casino-gold text-4xl opacity-30">♠</div>
+        <div class="floating-card absolute top-40 right-20 text-casino-gold text-3xl opacity-25" style="animation-delay: 1s;">♦</div>
+        <div class="floating-dice absolute top-60 left-1/4 text-casino-emerald text-2xl opacity-20" style="animation-delay: 2s;">⚀</div>
+        <div class="floating-chip absolute bottom-40 right-10 text-casino-gold text-3xl opacity-30" style="animation-delay: 0.5s;">🎰</div>
+        <div class="floating-star absolute top-32 left-1/2 text-casino-emerald text-2xl opacity-25" style="animation-delay: 1.5s;">✦</div>
+        <div class="floating-card absolute bottom-60 left-20 text-casino-gold text-3xl opacity-20" style="animation-delay: 2.5s;">♣</div>
+    </div>
+    <!-- Header -->
+    <nav class="fixed top-0 w-full bg-casino-dark/95 backdrop-blur-md z-50 border-b border-casino-gold/20">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-crown text-casino-gold text-2xl glow-text"></i>
+                    <span class="text-2xl font-bold text-casino-gold glow-text">Wonderluck</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="#games" class="nav-link">Games</a>
+                    <a href="/bonuses" class="nav-link">Bonuses</a>
+                    <a href="/payments" class="nav-link">Payments</a>
+                    <a href="#support" class="nav-link">Support</a>
+                </div>
+                <button onclick="redirectToGo()" class="cta-button px-6 py-2 text-sm">
+                    <i class="fas fa-play mr-2"></i>Play Now
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-24 container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-casino-gold mb-8">Casino Bonuses</h1>
+        <div class="bonus-grid">
+            <div class="bonus-card">
+                <h2 class="text-2xl font-bold mb-2">Welcome Bonus</h2>
+                <p>100% up to €500 + 200 Free Spins</p>
+            </div>
+            <div class="bonus-card">
+                <h2 class="text-2xl font-bold mb-2">Weekly Cashback</h2>
+                <p>15% cashback every week</p>
+            </div>
+            <div class="bonus-card">
+                <h2 class="text-2xl font-bold mb-2">VIP Rewards</h2>
+                <p>Exclusive offers for loyal players</p>
+            </div>
+        </div>
+        <section class="faq-section">
+            <h2 class="text-2xl font-bold text-casino-gold mb-4">Bonus Wagering at Wonderluck Casino FAQ</h2>
+            <div class="faq-item">
+                <div class="faq-question">What is wagering requirement? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Wagering requirement is the number of times you must play through your bonus before you can withdraw winnings.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How do I calculate wagering? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Multiply your bonus amount by the wagering multiplier (e.g., €100 bonus x 35x = €3500 to wager).</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Which games contribute to wagering? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Slots usually contribute 100%, while table games may contribute less or not at all.</div>
+            </div>
+        </section>
+        <form class="wager-form" id="wagerForm">
+            <h2 class="text-xl font-bold text-casino-gold mb-4">Bonus Wagering Time Calculator</h2>
+            <div class="mb-4">
+                <label for="bonusAmount" class="block mb-2">Bonus Amount (€):</label>
+                <input type="number" id="bonusAmount" class="w-full p-2 rounded text-black" required>
+            </div>
+            <div class="mb-4">
+                <label for="wagerMultiplier" class="block mb-2">Wagering Multiplier (e.g. 35):</label>
+                <input type="number" id="wagerMultiplier" class="w-full p-2 rounded text-black" required>
+            </div>
+            <div class="mb-4">
+                <label for="avgBet" class="block mb-2">Average Bet per Spin (€):</label>
+                <input type="number" id="avgBet" class="w-full p-2 rounded text-black" required>
+            </div>
+            <div class="mb-4">
+                <label for="spinsPerHour" class="block mb-2">Spins per Hour:</label>
+                <input type="number" id="spinsPerHour" class="w-full p-2 rounded text-black" required>
+            </div>
+            <button type="submit" class="cta-button px-6 py-2">Calculate</button>
+            <div id="wagerResult" class="mt-4 text-casino-emerald font-bold"></div>
+        </form>
+        <section class="article-section">
+            <h2 class="text-2xl font-bold text-casino-gold mb-2">Maximize Your Bonus at Wonderluck Casino</h2>
+            <p>Learn how to get the most out of your bonuses. <a href="/" class="text-casino-emerald underline">Wonderluck casino</a> offers generous rewards for new and loyal players. Always check the terms and wagering requirements before playing.</p>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-casino-dark border-t border-casino-gold/20 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-crown text-casino-gold text-2xl"></i>
+                        <span class="text-2xl font-bold text-casino-gold">Wonderluck</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Premium online casino experience with exclusive games and generous bonuses.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-casino-gold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/" class="text-gray-400 hover:text-casino-emerald">Wonderluck Casino</a></li>
+                        <li><a href="/bonuses" class="text-gray-400 hover:text-casino-emerald">Bonuses</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-casino-emerald">About</a></li>
+                        <li><a href="#support" class="text-gray-400 hover:text-casino-emerald">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-casino-gold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="text-gray-400">Live Chat: 24/7</li>
+                        <li class="text-gray-400">Email: support@wonderluckcasino.com</li>
+                        <li class="text-gray-400">Phone: +1-800-WONDER-1</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-casino-gold mb-4">Responsible Gaming</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-hand-paper text-casino-emerald"></i>
+                            <span class="text-sm text-gray-400">18+ Only</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-clock text-casino-emerald"></i>
+                            <span class="text-sm text-gray-400">Set Time Limits</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-phone text-casino-emerald"></i>
+                            <span class="text-sm text-gray-400">Problem Gambling Helpline: 1-800-522-4700</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-casino-gold/20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © 2024 Wonderluck Casino. All rights reserved. | 18+ | Play Responsibly
+                    </p>
+                    <div class="flex space-x-4 text-sm">
+                        <a href="/terms" class="text-gray-400 hover:text-casino-emerald">Terms & Conditions</a>
+                        <a href="#" class="text-gray-400 hover:text-casino-emerald">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-casino-emerald">Responsible Gaming</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = this.querySelector('i');
+                faqItem.classList.toggle('active');
+                if (faqItem.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    answer.style.maxHeight = '0';
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+        // Calculator functionality
+        document.getElementById('wagerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const bonus = parseFloat(document.getElementById('bonusAmount').value);
+            const multiplier = parseFloat(document.getElementById('wagerMultiplier').value);
+            const avgBet = parseFloat(document.getElementById('avgBet').value);
+            const spinsPerHour = parseFloat(document.getElementById('spinsPerHour').value);
+            if (isNaN(bonus) || isNaN(multiplier) || isNaN(avgBet) || isNaN(spinsPerHour) || bonus <= 0 || multiplier <= 0 || avgBet <= 0 || spinsPerHour <= 0) {
+                document.getElementById('wagerResult').textContent = 'Please enter valid values.';
+                return;
+            }
+            const totalWager = bonus * multiplier;
+            const hours = totalWager / (avgBet * spinsPerHour);
+            document.getElementById('wagerResult').textContent = `Estimated time to complete wagering: ${hours.toFixed(2)} hours.`;
+        });
+        // Redirect function for all CTA buttons
+        function redirectToGo() {
+            window.location.href = '/go';
+        }
+    </script>
+</body>
+</html>

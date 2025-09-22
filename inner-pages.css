@@ -1,0 +1,14 @@
+/* Inner pages custom styles for Wonderluck Casino */
+.bonus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+.bonus-card { background: #1A2332; border: 2px solid #b546ff; border-radius: 1rem; padding: 1.5rem; text-align: center; }
+.faq-section { margin-bottom: 2rem; }
+.faq-question { cursor: pointer; font-weight: bold; margin-bottom: 0.5rem; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; margin-bottom: 1rem; }
+.faq-item.active .faq-answer { max-height: 200px; }
+.wager-form { background: #1A2332; border-radius: 1rem; padding: 1.5rem; margin-bottom: 2rem; }
+.payments-table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; }
+.payments-table th, .payments-table td { border: 1px solid #b546ff; padding: 0.75rem; text-align: center; }
+.payments-table th { background: #430ba7; color: #fff; }
+.payments-table td { background: #1A2332; color: #fff; }
+.article-section { background: #1A2332; border-radius: 1rem; padding: 1.5rem; margin-bottom: 2rem; }
+.terms-section { background: #1A2332; border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; }
